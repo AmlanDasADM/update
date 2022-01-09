@@ -87,7 +87,7 @@ function Contact2() {
               {/* <label for="">Message</label>
               <span>Message</span> */}
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input type="submit" value="Send" class="btn-2" />
           </form>
         </div>
       </div>

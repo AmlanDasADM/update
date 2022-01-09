@@ -78,10 +78,10 @@
 }
 @media (max-width:1000px) {
     .bla{
-        height: 127px;
+        height: 80px;
     }
     .navbar{
-        height: 114px;
+        height: 82px;
     }
     .nav-item{
         font-size: 20px;

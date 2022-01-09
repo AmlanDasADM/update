@@ -372,6 +372,12 @@
         height: 600px;
         width: 100%;
     }
+    .skill-container{
+        height: 150vh;
+        width: 100%;
+        font-family: 'Jost', sans-serif;
+        margin-top: 5rem;
+    }
     .box{
         height: fit-content;
         width: 100%;
@@ -557,6 +563,14 @@
         text-align: center;
         margin-left:2.4rem ;
     }
+    .about-box-1st-line{
+        height:120rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items:center;
+    }
   .course-more-details{
     display: grid;
     grid-template-columns: repeat(3,2fr);
@@ -603,6 +617,14 @@
     .faq-box-img img{
         height: 100px;
         width: 100px;
+    }
+    .about-box-1st-line{
+        height:125rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items:center;
     }
     
     
@@ -737,7 +759,7 @@
     transform: translateY(0);
   }
   
-  .btn {
+  .btn-2 {
     padding: 0.6rem 1.3rem;
     background-color: #fff;
     border: 2px solid #fafafa;
@@ -945,7 +967,7 @@
   
   @media (max-width: 480px) {
     .container {
-      padding: 1.5rem;
+      padding: 0rem;
     }
   
     .contact-info:before {
