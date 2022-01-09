@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/update/static/css/main.0523d427.css",
+    "main.js": "/update/static/js/main.56564e49.js",
+    "static/media/faq-image-3.jpg": "/update/static/media/faq-image-3.2e2b8f0ae35610b96899.jpg",
+    "static/media/faq-image-4.jpg": "/update/static/media/faq-image-4.b5c4d72e9fa505469275.jpg",
+    "static/media/faq-image-2.jpg": "/update/static/media/faq-image-2.01ab54af4003ec92e683.jpg",
+    "static/media/cartoon.png": "/update/static/media/cartoon.fb248ff92b74164f589e.png",
+    "index.html": "/update/index.html",
+    "main.0523d427.css.map": "/update/static/css/main.0523d427.css.map",
+    "main.56564e49.js.map": "/update/static/js/main.56564e49.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0523d427.css",
+    "static/js/main.56564e49.js"
+  ]
+}
