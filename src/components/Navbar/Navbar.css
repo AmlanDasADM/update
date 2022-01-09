@@ -1,0 +1,117 @@
+.bla{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    height: 80px;
+    box-shadow: rgb(0 0 0 / 12%) 0 1px 3px;
+    background-color: #d1dfee;
+    transition: 1s ease;
+  
+}
+.navbar {
+    margin-bottom: 2rem;
+    position: relative;
+}
+.fade-in{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    opacity: 0.8;
+    top: 0%;
+    height: 80px;
+    transition: 1s ease;
+    background-color: rgba(255,255,255,0.97);
+    box-shadow: rgb(0 0 0 / 12%) 0 1px 3px;
+}
+.navbar-nav{
+    margin-left: 24rem;
+}
+
+.nav-item{
+    font-size: 17px;
+    font-family: 'Jost', sans-serif;
+    margin-left: 3.5rem;
+    text-align: center;
+    opacity: 1;
+
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    margin-left: 0.5rem;
+    width: 150%;
+    text-align: center;
+
+}
+.navbar-light .navbar-nav .active-page {
+    color: rgb(255, 255, 255);
+    color: #3c77b1;
+
+}
+.active-page{
+    border-radius: 20px;
+    text-align: center;
+    border-top:1px solid #3c77b1;
+    color: #3c77b1;
+    border-bottom: 1px solid #3c77b1;
+
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    border-radius: 20px;
+    text-align: center;
+    transition: 1s ease;
+    text-align: center;
+    border-top:1px solid #3c77b1;
+    color: #3c77b1;
+    border-bottom: 1px solid #3c77b1;
+}
+
+.navbar-brand{
+    font-size: 40px;
+    font-family: 'Jost', sans-serif;
+    color: #3c77b1;
+
+
+}
+.navbar-light .navbar-brand {
+    color: #3c77b1;
+    font-weight: 900;
+}
+@media (max-width:1000px) {
+    .bla{
+        height: 127px;
+    }
+    .navbar{
+        height: 114px;
+    }
+    .nav-item{
+        font-size: 20px;
+        font-family: 'Jost', sans-serif;
+        margin: 0rem;
+        text-align: start;
+        margin-left: 3rem;
+    }
+  
+    .navbar-collapse {
+        background-color: #3c77b1;
+    }
+    .navbar-nav{
+        margin-left: 0rem;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #fff;
+        margin: 0rem;
+        width: 100%;
+        text-align: start;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+        background-color: #3c77b1;
+        border-radius: 20px;
+        text-align: center;
+        transition: 1s ease;
+        color: white;
+        text-align: start;
+    
+    }
+    
+    
+}
