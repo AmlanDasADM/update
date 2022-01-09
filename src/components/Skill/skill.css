@@ -188,7 +188,7 @@
     height: fit-content;
     width: 100%;
     margin: 2rem;
-    background-color: rgb(255, 255, 255);
+    background-color: #f8f8f8;
     border-bottom: 4px solid rgb(80, 192, 230);
     box-shadow: rgb(80 192 230) 0px 21px 21px -13px;
     padding: 40px 20px 50px;
@@ -202,7 +202,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #3c77b1;
+    background-color: #fff;
+    border-bottom: 4px solid #fff;
+    box-shadow: rgb(48, 47, 47) 0px 12px 14px -12px;
 }
 .faq-box-2nd-line{
     height: 800px;
@@ -217,7 +219,8 @@
     width: 100%;
     max-width: 150px;
     visibility: visible;
-    animation-duration: 0.3s
+    animation-duration: 0.3s;
+    border-radius: 50%;
 }
 .faq-box-img{
     text-align: center;
@@ -237,7 +240,7 @@
 
                                             /* about our course part */ 
 .about-our-course{
-    height: 200vh;
+    height: 300vh;
     width: 100%;
     box-sizing: border-box;
 }
@@ -248,18 +251,21 @@
     align-items: center;
 }
 .about-box{
-    height: 800px;
+    height: fit-content;
     width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
+    box-shadow: rgb(48, 47, 47) 0px 12px 14px -12px;
+
 }
 .about-inner-box{
-    height: 500px;
+    height: 600px;
     width: 100%;
     margin: 2rem;
-    background-color: rgb(255, 255, 255);
+    background-color: #f8f8f8;
     border-bottom: 4px solid rgb(80, 192, 230);
     box-shadow: rgb(80 192 230) 0px 21px 21px -13px;
     padding: 40px 20px 50px;  
@@ -285,7 +291,8 @@
     width: 100%;
     max-width: 150px;
     visibility: visible;
-    animation-duration: 0.3s
+    animation-duration: 0.3s;
+    border-radius: 50%;
 }
 .about-box-img{
     text-align: center;
@@ -313,7 +320,7 @@
      width: 100%;
      margin-left: 4.5rem;
      background-color: #fff;
-     height: 100vh;
+     height: 120vh;
      font-family: 'Jost', sans-serif;
 }
 .course-more-details p{
@@ -327,8 +334,16 @@
 .right-side-container{
     width: 95%;
     background-color: #fff;
-    height: 90vh;
+    height: 110vh;
     margin-left: 3rem;
+}
+.course-more-details{
+    margin-bottom: 3rem;
+}
+.course-details-button{
+    text-align: center;
+    margin: auto;
+    padding-top: 3rem;
 }    
 .media-player{
     margin: 1rem;
@@ -353,6 +368,25 @@
     height: 150px;
     padding: 1rem;
 }
+.accordion-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-21 {
+    padding: 0.6rem 1.3rem;
+    background-color: #3c77b1;
+    border: 2px solid #fafafa;
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 2.5;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+    width: 100%;
+  }
 .right-side-modal-body{
     height: 50vh;
 }
@@ -369,7 +403,7 @@
 
 @media (max-width:1050px){
     .about-inner-box{
-        height: 600px;
+        height: fit-content;
         width: 100%;
     }
     .skill-container{
@@ -377,6 +411,12 @@
         width: 100%;
         font-family: 'Jost', sans-serif;
         margin-top: 5rem;
+    }
+    .about-box-1st-line{
+        height:750px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
     .box{
         height: fit-content;
@@ -388,7 +428,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        background-color: #3c77b1;
+        background-color: #f8f8f8;
     }
 }
 @media (max-width:850px) {
@@ -397,7 +437,7 @@
         text-align: center;
     }
     .faq{
-        height: 350vh;
+        height: 300vh;
     }
   
     .right-side{
@@ -419,7 +459,7 @@
         width:88%;
     }
     .about-box-2nd-line{
-        height: 1350px;
+        height: fit-content;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -428,21 +468,22 @@
         background-color: none;
     }
     .about-box-1st-line{
-        height:110rem;
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         align-items:center;
+        height: 110rem;
     }
     .faq-box-1st-line{
-        height:700px;
+        height:fit-content;
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         align-items:center;
-        background-color: #f8f8f8;
+        background-color: #fff;
+
     }
     .first-container{
         display: flex;
@@ -767,6 +808,18 @@
     color: #1abc9c;
     line-height: 1;
     border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+  }
+  .btn-3 {
+    padding: 0.6rem 1.3rem;
+    background-color: #3c77b1;
+    border: 2px solid #fafafa;
+    font-size: 0.95rem;
+    color: #ffffff;
+    line-height: 1;
     outline: none;
     cursor: pointer;
     transition: 0.3s;

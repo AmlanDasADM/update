@@ -64,10 +64,10 @@ function skill()
                     <div className="first-container-right-side">
                     <div className="left-side-title">
                         <div className="title-heading">
-                            <h3>Spoken English</h3>
+                            <h3>Introduction</h3>
                         </div>
                         <div className="title-para">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus voluptatibus expedita reprehenderit tempore .</p>
+                            <p>How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS. </p>
                         </div>
                     </div>
                     <div className="left-side-teacher">
@@ -118,6 +118,9 @@ function skill()
                             <p> ✅ 83 Video Lectures</p>
                             <p> ✅ 83 Video Lectures</p>
                             <p> ✅ 83 Video Lectures</p>
+                        </div>
+                        <div className="course-details-button">
+                            <button className='btn-21'>Enroll Now</button>
                         </div>
                     </div>
 
@@ -213,12 +216,11 @@ function skill()
                                                 <h5>Q.To whom the course is?</h5>
                                     </div>
                                     <div className="about-box-para">
-                                <p>Someone have keen interest in AWS public cloud
-                                        Someone who wants to make Backend for FREE of COST. 
-                                        Have some idea on backend web development 
-                                        Want to explore various AWS certifications 
-                                            Want to design highly available and concurrent REST API backend
-                                </p>
+                                        <p>🧿 Someone have keen interest in AWS public cloud</p>
+                                        <p>🧿 Someone who wants to make Backend for FREE of COST. </p>
+                                        <p>🧿 Have some idea on backend web development </p>
+                                        <p>🧿 Want to explore various AWS certifications </p>
+                                        <p>🧿 Want to design highly available and concurrent REST API backend</p>
                                     </div>
 
                                 </div>
@@ -230,11 +232,10 @@ function skill()
                                                 <h5>Q.What will you learn from this course?</h5>
                                     </div>
                                     <div className="about-box-para">
-                                <p>Create totally serverless backend 
-                                    100% free of cost REST API development
-                                    Learning fundamental AWS services 
-                                    The strength of serverless application
-                                        </p>
+                                        <p>🧿 Create totally serverless backend </p>
+                                        <p>🧿 100% free of cost REST API development </p>
+                                        <p>🧿 Learning fundamental AWS services  </p>
+                                        <p>🧿 The strength of serverless application</p>
                                     </div>
 
                                 </div>
@@ -246,13 +247,12 @@ function skill()
                                                 <h5>Q.What is the course culture?</h5>
                                     </div>
                                     <div className="about-box-para">
-                                <p>2 days per week live session.
-                                    Chance to expose yourself to achieve a good career.
-                                    Every session has Hands-on and live coding with the instructor.
-                                    Assignment to ensure your learning effectiveness.
-                                    Career guide to become a good AWS practitioner.
-                                            Q&A session on each lecture
-                                        </p>
+                                        <p>🧿 2 days per week live session.</p>
+                                        <p>🧿 Chance to expose yourself to achieve a good career.</p>
+                                        <p>🧿 Every session has Hands-on and live coding with the instructor.  </p>
+                                        <p>🧿 Assignment to ensure your learning effectiveness.</p>
+                                        <p>🧿 Career guide to become a good AWS practitioner.</p>
+                                        <p>🧿 Q&A session on each lecture </p>
                                     </div>
 
                                 </div>
@@ -267,10 +267,9 @@ function skill()
                                                 <h5>Q.Where do you apply your knowledge of this course?</h5>
                                     </div>
                                     <div className="about-box-para">
-                                <p>This course is like a gateway to enter AWS world
-                                        Many companies are actively looking for AWS experts 
-                                        Your knowledge will help any company to build REST APIs.
-                                     </p>
+                                        <p>🧿 This course is like a gateway to enter AWS world</p>
+                                        <p>🧿 Many companies are actively looking for AWS experts </p>
+                                        <p>🧿 Your knowledge will help any company to build REST APIs.</p>
                                     </div>
 
                                 </div>
@@ -282,12 +281,10 @@ function skill()
                                                 <h5>Q.Prerequisite of this course</h5>
                                     </div>
                                     <div className="about-box-para">
-                                <p>At Least 1 year of web development experience on Backend
-                                        Dual currency Credit/Debit/Prepaid card
-                                            High quality internet speed
-                                        </p>
+                                        <p>🧿 At Least 1 year of web development experience on Backend</p>
+                                        <p>🧿 Dual currency Credit/Debit/Prepaid card </p>
+                                        <p>🧿 High quality internet speed.</p>
                                     </div>
-
                                 </div>
                             </div>
                             </div>

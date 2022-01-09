@@ -69,7 +69,7 @@ function Contact2() {
           <span class="circle two"></span>
 
           <form action="index.html" autocomplete="off">
-            <h3 class="title">Contact us</h3>
+            <h3 class="title">Enroll Now</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" placeholder='Name'/>
              
