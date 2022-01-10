@@ -5,36 +5,56 @@ import {FacebookIcon,TwitterIcon, LinkedinIcon} from 'react-share'
 
 function Contact2()
 {
-  const url = "http://localhost:3000/update/main.7de28914446a388cd6be.hot-update.json"
+  const url = "https://sj6wyyl2fc.execute-api.ap-southeast-1.amazonaws.com/dev/save-contact"
   const token = "a25db276-58a9-11ec-bf63-0242ac130002"
-  const [data,setData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message:""
-  })
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [phone, setPhone] = useState('')
+const [message, setMessage] = useState('')
 
-  function handleOnchange(e)
-  {
-    const newData = { ...data }
-    newData[e.target.id] = e.target.value 
-    setData(newData)
-    console.log(newData)
-  }
-  function onSubmit(e)
-  {
+// onChange function
+
+const nameOnChanged = (e) =>
+{
+    setName(e.target.value)
+}
+
+const emailOnChanged = (e) =>
+{
+    setEmail(e.target.value)
+}
+const phoneOnChanged = (e) =>
+{
+    setPhone(e.target.value)
+}
+
+const msgOnChanged = (e) =>
+{
+    setMessage(e.target.value)
+}
+
+//   onClick function
+
+const handleOnClicked = (e) => {
     e.preventDefault()
-    axios.post(token,url, {
-      name: data.name,
-      email: data.email,
-      phone:data.phone,
-      message: data.message,
-      
-    }).then(res =>console.log(res.data))
-    .catch(err => console.log(err))
 
-  }
-  
+    const form = {
+        name,
+        email,
+        phone,
+        message,
+        token
+    }
+
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+    axios.post(url, form)
+        .then(res =>console.log(res.data))
+        .catch(err => console.log(err))
+}
+
   
     return (
         <>
@@ -100,8 +120,7 @@ function Contact2()
         <div class="contact-form">
           <span class="circle one"></span>
           <span class="circle two"></span>
-
-          <form onSubmit={(e)=> onSubmit(e)} autocomplete="off" >
+            <form onSubmit={handleOnClicked} autocomplete="off" >
             <h3 class="title">Enroll Now</h3>
             <div class="input-container">
                   <input
@@ -109,9 +128,9 @@ function Contact2()
                     name="name"
                     class="input"
                     placeholder='Name'
-                    onChange={(e) => handleOnchange(e)}
+                    onChange={nameOnChanged}
                     id='name'
-                    value={data.name} />
+                    value={name} />
              
             </div>
             <div class="input-container">
@@ -120,9 +139,9 @@ function Contact2()
                     name="email"
                     class="input"
                     placeholder='Email'
-                    onChange={(e) => handleOnchange(e)}
+                    onChange={emailOnChanged}
                     id='email'
-                    value={data.email}
+                    value={email}
                   />
             
             </div>
@@ -132,21 +151,21 @@ function Contact2()
                     name="phone"
                     class="input"
                     placeholder='Phone'
-                    onChange={(e) => handleOnchange(e)}
+                    onChange={phoneOnChanged}
                     id='phone'
-                    value={data.phone} />
+                    value={phone} />
             
             </div>
             <div class="input-container textarea">
                   <textarea name="message"
                     class="input"
                     placeholder='Message'
-                    onChange={(e) => handleOnchange(e)}
+                    onChange={msgOnChanged}
                     id='message'
-                    value={data.message} ></textarea>
+                    value={message} ></textarea>
               {/* <label for="">Message</label>
               <span>Message</span> */}
-            </div>
+                </div>
             <input type="submit" value="Send" class="btn-2" />
           </form>
         </div>

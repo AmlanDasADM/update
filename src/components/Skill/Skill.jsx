@@ -7,6 +7,7 @@ import faqImg3 from "../../images/faq-image-4.jpg"
 import Preview from './Preview'
 import ReactPlayer from 'react-player'
 import Contact2 from './Contact2'
+import Contact from './Contact'
 import {Link} from 'react-scroll'
 
 
@@ -119,9 +120,26 @@ function skill()
                             <p> ✅ 83 Video Lectures</p>
                         </div>
                         <div className="course-details-button">
-                            <Link smooth={true} spy={true} offset={70} duration={1000} to='contact'>
-                                <button className='btn-21'>Enroll Now</button>
-                            </Link>    
+                        <button type="button" class="btn-21" data-bs-toggle="modal" data-bs-target="#staticBackdropContact">
+                        Enroll Now
+                        </button>
+                    
+                        <div class="modal fade" id="staticBackdropContact" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="contact-modal-content modal-content">
+                                <div class="contact-modal-header modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Enroll now</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></   button>
+                                </div>
+                                <div class="contact-modal-body modal-body">
+                                <Contact />
+                                </div>
+                                <div class="contact-modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>   
                         </div>
                     </div>
 
@@ -199,7 +217,7 @@ function skill()
                         </div>
                     </div> */}
                 
-                
+
                      {/* about our course   */} 
                 <div className="about-our-course">
                     <div className="about-body">

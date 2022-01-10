@@ -240,6 +240,20 @@
     font-weight: 500;
     font-family: 'Hind Siliguri', sans-serif;
 }
+/* mode contents  */
+.contact-modal-content {
+    width: 100%;
+    height: 0px;
+}
+.contact-modal-header{
+    background-color: whitesmoke;
+}
+.contact-modal-footer{
+    background-color: none;
+}
+.contact-modal-body{
+    padding: 0px;
+}
 
                                             /* about our course part */ 
 .about-our-course{
@@ -1080,3 +1094,49 @@
       padding: 0.45rem 1.2rem;
     }
   }
+  /* contact 2  */
+  .form-2 {
+    width: 100%;
+    max-width: 820px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: grid;
+    z-index: 98;
+    position: unset;
+    grid-template-columns: 1fr;
+  }
+  .social-media-2 p {
+    color: #333;
+  }
+  .social-icons-2 a {
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .fab-2{
+      width: 2rem;
+      height: 2rem;
+  }
+  .social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+  }
+  
+  .social-icons-2 a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: linear-gradient(45deg,   #3c77b1,  #3c77b1);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .social-icons-2 a:hover {
+    transform: scale(1.05);
+  }
+
