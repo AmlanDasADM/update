@@ -6,9 +6,8 @@ import faqImg2 from "../../images/faq-image-3.jpg"
 import faqImg3 from "../../images/faq-image-4.jpg"
 import Preview from './Preview'
 import ReactPlayer from 'react-player'
-import Contact from './Contact'
 import Contact2 from './Contact2'
-// import { BrowserRouter as Router ,  Route, Switch } from "react-router-dom";
+import {Link} from 'react-scroll'
 
 
 
@@ -120,14 +119,16 @@ function skill()
                             <p> ✅ 83 Video Lectures</p>
                         </div>
                         <div className="course-details-button">
-                            <button className='btn-21'>Enroll Now</button>
+                            <Link smooth={true} spy={true} offset={70} duration={1000} to='contact'>
+                                <button className='btn-21'>Enroll Now</button>
+                            </Link>    
                         </div>
                     </div>
 
            </div>
 
                     {/* FAQ  */}
-                    <div className="faq">
+                    {/* <div className="faq">
                         <div className="faq-body">
                             <div className="faq-heading">
                                 <h2>FAQ (Frequently Asked Questions)</h2>
@@ -193,13 +194,12 @@ function skill()
                                 </div>
 
                                 </div>
-                            {/* <div className="faq-box-2nd-line">
-                                <div className="box"> 3rd box</div>
-                                <div className="box"> 4th box</div>
-                            </div> */}
+                            
                             </div>
                         </div>
-                    </div>
+                    </div> */}
+                
+                
                      {/* about our course   */} 
                 <div className="about-our-course">
                     <div className="about-body">

@@ -65,8 +65,11 @@
 .accordion-button { 
     background-color: #f8f8f8;
     border: none;
+    font-weight: 600;
 }
-
+.video-button{
+    color: red;
+}
 .modal-content{
     width: 100%;
     height: 80%;
@@ -240,9 +243,10 @@
 
                                             /* about our course part */ 
 .about-our-course{
-    height: 300vh;
+    height: fit-content;
     width: 100%;
     box-sizing: border-box;
+    margin-bottom:4rem ;
 }
 .about-body{
     display: flex;
@@ -312,7 +316,15 @@
 
 .readmore{
     transition: 1s ease-in;
-}         
+} 
+.accordion-body .btn{
+    margin-left: -14px;
+    margin-bottom: -12px;
+}
+.py{
+    margin-left:3rem ;
+}
+      
 
                                           /* right side part  */
 
@@ -368,12 +380,7 @@
     height: 150px;
     padding: 1rem;
 }
-.accordion-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 .btn-21 {
     padding: 0.6rem 1.3rem;
     background-color: #3c77b1;
@@ -445,6 +452,10 @@
         margin-left: 4.5rem;
         background-color: #fff;
         margin-bottom: 4rem;
+    }
+    .accordion-body .btn{
+        margin-left: -18px;
+        margin-bottom: -12px;
     }
     .about-our-course{
         height: 420vh;
@@ -603,6 +614,10 @@
         margin: auto;
         text-align: center;
         margin-left:2.4rem ;
+    }
+    .accordion-body .btn{
+        margin-left: -21px;
+        margin-bottom: -12px;
     }
     .about-box-1st-line{
         height:120rem;

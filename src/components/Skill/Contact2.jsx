@@ -1,11 +1,44 @@
-import React from 'react'
-import {EmailShareButton,FacebookShareButton , TwitterShareButton , LinkedinShareButton } from 'react-share'
-import {FacebookIcon,TwitterIcon,EmailIcon , LinkedinIcon} from 'react-share'
+import axios from 'axios'
+import React ,{useState}from 'react'
+import {FacebookShareButton , TwitterShareButton , LinkedinShareButton } from 'react-share'
+import {FacebookIcon,TwitterIcon, LinkedinIcon} from 'react-share'
 
-function Contact2() {
+function Contact2()
+{
+  const url = "http://localhost:3000/update/main.7de28914446a388cd6be.hot-update.json"
+  const token = "a25db276-58a9-11ec-bf63-0242ac130002"
+  const [data,setData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message:""
+  })
+
+  function handleOnchange(e)
+  {
+    const newData = { ...data }
+    newData[e.target.id] = e.target.value 
+    setData(newData)
+    console.log(newData)
+  }
+  function onSubmit(e)
+  {
+    e.preventDefault()
+    axios.post(token,url, {
+      name: data.name,
+      email: data.email,
+      phone:data.phone,
+      message: data.message,
+      
+    }).then(res =>console.log(res.data))
+    .catch(err => console.log(err))
+
+  }
+  
+  
     return (
         <>
-      <div class="container-form">
+      <div class="container-form" id='contact'>
       <span class="big-circle"></span>
       <img src="img/shape.png" class="square" alt="" />
       <div class="form">
@@ -68,22 +101,49 @@ function Contact2() {
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="index.html" autocomplete="off">
+          <form onSubmit={(e)=> onSubmit(e)} autocomplete="off" >
             <h3 class="title">Enroll Now</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" placeholder='Name'/>
+                  <input
+                    type="text"
+                    name="name"
+                    class="input"
+                    placeholder='Name'
+                    onChange={(e) => handleOnchange(e)}
+                    id='name'
+                    value={data.name} />
              
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" placeholder='Email' />
+                  <input
+                    type="email"
+                    name="email"
+                    class="input"
+                    placeholder='Email'
+                    onChange={(e) => handleOnchange(e)}
+                    id='email'
+                    value={data.email}
+                  />
             
             </div>
             <div class="input-container">
-              <input type="tel" name="phone" class="input"  placeholder='Phone'/>
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="input"
+                    placeholder='Phone'
+                    onChange={(e) => handleOnchange(e)}
+                    id='phone'
+                    value={data.phone} />
             
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input" placeholder='Message'></textarea>
+                  <textarea name="message"
+                    class="input"
+                    placeholder='Message'
+                    onChange={(e) => handleOnchange(e)}
+                    id='message'
+                    value={data.message} ></textarea>
               {/* <label for="">Message</label>
               <span>Message</span> */}
             </div>
