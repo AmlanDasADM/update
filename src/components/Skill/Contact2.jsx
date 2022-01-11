@@ -5,8 +5,8 @@ import {FacebookIcon,TwitterIcon, LinkedinIcon} from 'react-share'
 
 function Contact2()
 {
-  const url = "https://sj6wyyl2fc.execute-api.ap-southeast-1.amazonaws.com/dev/save-contact"
-  const token = "a25db276-58a9-11ec-bf63-0242ac130002"
+const url = "https://sj6wyyl2fc.execute-api.ap-southeast-1.amazonaws.com/dev/save-contact"
+const token = "a25db276-58a9-11ec-bf63-0242ac130002"
 const [name, setName] = useState('')
 const [email, setEmail] = useState('')
 const [phone, setPhone] = useState('')
@@ -87,16 +87,16 @@ const handleOnClicked = (e) => {
           <div class="social-media mb-3">
             <p>Connect with us :</p>
             <div class="social-icons">
-              <a href="#">
+              <a href="https://www.instagram.com/_amlan_das_/">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/_amlan_das_/">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/_amlan_das_/">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/_amlan_das_/">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>

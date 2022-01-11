@@ -140,16 +140,16 @@ function Contact2()
           <div class="social-media-2 m-auto">
             <p>Connect with us :</p>
             <div class="social-icons-2 m-auto">
-              <a href="#">
+              <a href="https://www.instagram.com/_amlan_das_/">
                 <i class="fab fab-2 fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/_amlan_das_/">
                 <i class="fab fab-2 fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/_amlan_das_/">
                 <i class="fab fab-2 fa-instagram"></i>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/_amlan_das_/">
                 <i class="fab fab-2 fa-linkedin-in"></i>
               </a>
             </div>

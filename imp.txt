@@ -79,7 +79,97 @@ function LoadMore({ children = 4 })
         </div>    
     )
 }
+// function ReadMore2({ children, maxcharacterCount = 260 })
+// {
+//     const text = children 
+//     const [trunked, setTrunked] = useState(true)
+//     const resultString = trunked ? text.slice(0, 260) : text;
+//      const handleOnClick = () =>
+//     {
+//         setTrunked(!trunked)
+//     }
 
+//     return (
+//         <div className="collapsed-div">
+//             <p className='has-text-left'>
+//             {resultString}
+//                 <span onClick={handleOnClick} className='collapsed-button'> {trunked ? "...Read more" : "...Read less"} </span>
+//             </p>
+//         </div>    
+//     )
+// }
+   {/* FAQ  */}
+                    {/* <div className="faq">
+                        <div className="faq-body">
+                            <div className="faq-heading">
+                                <h2>FAQ (Frequently Asked Questions)</h2>
+                            </div>
+                            <div className="faq-box">
+                            <div className="faq-box-1st-line">
+                                <div className="box">
+                                    <div className="faq-box-img">
+                                        <img src={faqImg2} alt="" srcset="" />
+                                    </div>
+                                    <div className="faq-box-heading">
+                                                <h5>Q.কোর্সটি কীভাবে কিনবো?</h5>
+                                    </div>
+                                    <div className="faq-box-para">
+                                <ReadMore2  className="readmore" >"কোর্সটি কিনুন" বাটনে ক্লিক করুন।
+                                    আপনি যেই ফোন নম্বর বা ইমেইল দিয়ে কোর্সটি কিনতে চান সেটি প্রদান করে “এগিয়ে যান” বাটনে ক্লিক করুন।
+                                    “প্রশ্ন-চিহ্ন” আইকনে ক্লিক করে পেমেন্ট করার নিয়মটি জেনে নিন।
+                                    আপনার মোবাইল নাম্বার বা ইমেইল দিয়ে “কোর্সটি কিনুন” অপশনে ক্লিক করুন। 
+                                    পেমেন্ট মেথড নির্বাচন করুন।
+                                    আপনাকে পেমেন্ট সেকশনে নিয়ে যাওয়া হবে যেখানে আপনার পেমেন্ট করতে পারবেন।
+                                                    পেমেন্ট সম্পন্ন করার পর আপনার একাউন্টে “আপনার কোর্সসমূহ” সেকশন কোর্সটি চলে আসবে।
+                                        </ReadMore2>
+                                    </div>
+
+                                </div>
+                                <div className="box">
+                                    <div className="faq-box-img">
+                                        <img src={faqImg3} alt="" srcset="" />
+                                    </div>
+                                    <div className="faq-box-heading">
+                                                <h5>Q.কোর্সটি কীভাবে কিনবো?</h5>
+                                    </div>
+                                    <div className="faq-box-para">
+                                <ReadMore2  className="readmore">"কোর্সটি কিনুন" বাটনে ক্লিক করুন।
+                                    আপনি যেই ফোন নম্বর বা ইমেইল দিয়ে কোর্সটি কিনতে চান সেটি প্রদান করে “এগিয়ে যান” বাটনে ক্লিক করুন।
+                                    “প্রশ্ন-চিহ্ন” আইকনে ক্লিক করে পেমেন্ট করার নিয়মটি জেনে নিন।
+                                    আপনার মোবাইল নাম্বার বা ইমেইল দিয়ে “কোর্সটি কিনুন” অপশনে ক্লিক করুন। 
+                                    পেমেন্ট মেথড নির্বাচন করুন।
+                                    আপনাকে পেমেন্ট সেকশনে নিয়ে যাওয়া হবে যেখানে আপনার পেমেন্ট করতে পারবেন।
+                                                    পেমেন্ট সম্পন্ন করার পর আপনার একাউন্টে “আপনার কোর্সসমূহ” সেকশন কোর্সটি চলে আসবে।
+                                        </ReadMore2>
+                                    </div>
+
+                                </div>
+                                <div className="box">
+                                    <div className="faq-box-img">
+                                        <img src={faqImg1} alt="" srcset="" />
+                                    </div>
+                                    <div className="faq-box-heading">
+                                                <h5>Q.কোর্সটি কীভাবে কিনবো?</h5>
+                                    </div>
+                                    <div className="faq-box-para">
+                                <ReadMore2 className="readmore">"কোর্সটি কিনুন" বাটনে ক্লিক করুন।
+                                    আপনি যেই ফোন নম্বর বা ইমেইল দিয়ে কোর্সটি কিনতে চান সেটি প্রদান করে “এগিয়ে যান” বাটনে ক্লিক করুন।
+                                    “প্রশ্ন-চিহ্ন” আইকনে ক্লিক করে পেমেন্ট করার নিয়মটি জেনে নিন।
+                                    আপনার মোবাইল নাম্বার বা ইমেইল দিয়ে “কোর্সটি কিনুন” অপশনে ক্লিক করুন। 
+                                    পেমেন্ট মেথড নির্বাচন করুন।
+                                    আপনাকে পেমেন্ট সেকশনে নিয়ে যাওয়া হবে যেখানে আপনার পেমেন্ট করতে পারবেন।
+                                                    পেমেন্ট সম্পন্ন করার পর আপনার একাউন্টে “আপনার কোর্সসমূহ” সেকশন কোর্সটি চলে আসবে।
+                                        </ReadMore2>
+                                    </div>
+
+                                </div>
+
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div> */}
+                
 function Preview()
 {
   
