@@ -161,7 +161,7 @@ function Preview()
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                         <button type="button" class="btn video-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
-                        🧿 VIDEO: What is serverless? 
+                        {/* 🧿 VIDEO: What is serverless?  */}
                         </button>
                     
                         <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
