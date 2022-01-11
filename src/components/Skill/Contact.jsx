@@ -11,6 +11,7 @@ function Contact2()
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
+  const [text, setText] = useState('')
   
   // onChange function
 
@@ -51,7 +52,7 @@ function Contact2()
       setPhone("");
       setMessage("");
       axios.post(url, form)
-          .then(res =>console.log(res.data))
+          .then(res =>console.log(res.data), setText(`Your form submit successfuly `))
           .catch(err => console.log(err))
 }
   
@@ -74,7 +75,8 @@ function Contact2()
           <span class="circle two"></span>
 
           <form onSubmit={handleOnClicked} autocomplete="off" >
-            <h3 class="title">Enroll Now</h3>
+                  <h3 class="title">Enroll Now</h3>
+                  <h4 style={{color:"#0f0"}}>{text}</h4>
             <div class="input-container">
                   <input
                     type="text"

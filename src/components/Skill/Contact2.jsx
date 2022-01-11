@@ -11,6 +11,7 @@ const [name, setName] = useState('')
 const [email, setEmail] = useState('')
 const [phone, setPhone] = useState('')
 const [message, setMessage] = useState('')
+const [text, setText] = useState('')
 
 // onChange function
 
@@ -51,7 +52,7 @@ const handleOnClicked = (e) => {
     setPhone("");
     setMessage("");
     axios.post(url, form)
-        .then(res =>console.log(res.data))
+        .then(res =>console.log(res.data) , setText(`Your form submit successfuly `))
         .catch(err => console.log(err))
 }
 
@@ -63,12 +64,11 @@ const handleOnClicked = (e) => {
       <img src="img/shape.png" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
+          <h3 class="title">Let's get in touch  </h3>
           <p class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
             dolorum adipisci recusandae praesentium dicta!
           </p>
-
           <div class="info">
             <div class="information">
               <img src="img/location.png" class="icon" alt="" />
@@ -122,6 +122,7 @@ const handleOnClicked = (e) => {
           <span class="circle two"></span>
             <form onSubmit={handleOnClicked} autocomplete="off" >
             <h3 class="title">Enroll Now</h3>
+             <h4 style={{color:"#0f0"}}>{text}</h4>
             <div class="input-container">
                   <input
                     type="text"
