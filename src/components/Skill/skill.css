@@ -1141,4 +1141,6 @@
   .social-icons-2 a:hover {
     transform: scale(1.05);
   }
-
+.errormsg{
+    color: red;
+}

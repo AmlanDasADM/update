@@ -1,60 +1,116 @@
 import axios from 'axios'
 import React ,{useState}from 'react'
 import {FacebookShareButton , TwitterShareButton , LinkedinShareButton } from 'react-share'
-import {FacebookIcon,TwitterIcon, LinkedinIcon} from 'react-share'
+import { FacebookIcon, TwitterIcon, LinkedinIcon } from 'react-share'
+
+
+
 
 function Contact2()
 {
-    const url = "https://sj6wyyl2fc.execute-api.ap-southeast-1.amazonaws.com/dev/save-contact"
-    const token = "a25db276-58a9-11ec-bf63-0242ac130002"
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [message, setMessage] = useState('')
-  const [text, setText] = useState('')
+const url = "https://sj6wyyl2fc.execute-api.ap-southeast-1.amazonaws.com/dev/save-contact"
+const token = "a25db276-58a9-11ec-bf63-0242ac130002"
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [phone, setPhone] = useState('')
+const [message, setMessage] = useState('')
+const [text, setText] = useState('')
+const [nameErr, setNameErr] = useState('')
+const [emailErr, setEmailErr] = useState('')
+const [phoneErr, setPhoneErr] = useState('')
+const [msgErr, setMsgErr] = useState('')
   
-  // onChange function
 
-  const nameOnChanged = (e) =>
+
+
+// onChange function
+
+const nameOnChanged = (e) =>
+{
+  setName(e.target.value)
+}
+
+const emailOnChanged = (e) =>
+{
+    setEmail(e.target.value)
+}
+const phoneOnChanged = (e) =>
+{
+    setPhone(e.target.value)
+}
+
+const msgOnChanged = (e) =>
+{
+    setMessage(e.target.value)
+}
+
+//   onClick function
+
+  const handleOnClicked = (e) =>
   {
-      setName(e.target.value)
-  }
+    e.preventDefault()
 
-  const emailOnChanged = (e) =>
-  {
-      setEmail(e.target.value)
-  }
-  const phoneOnChanged = (e) =>
-  {
-      setPhone(e.target.value)
-  }
 
-  const msgOnChanged = (e) =>
-  {
-      setMessage(e.target.value)
-  }
-
-  //   onClick function
-
-  const handleOnClicked = (e) => {
-      e.preventDefault()
-
-      const form = {
-          name,
-          email,
-          phone,
-          message,
-          token
-      }
-
+    if (name.length > 0 ) {
       setName("");
       setEmail("");
       setPhone("");
       setMessage("");
+ 
+    } else {
+      setNameErr(' name is required!')
+    }
+    // email 
+    if (email.length > 0) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } else {
+      setEmailErr(' email is required!')
+    }
+    // phone 
+    if (phone.length > 0) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } else {
+      setPhoneErr(' phone is required!')
+    }
+    // message 
+    if (message.length > 0) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } else {
+      setMsgErr(' message is required!')
+    }
+
+    // success !! 
+    if (name.length > 1, email.length > 1, phone.length > 1, message.length > 1) {
+      const form = {
+        name,
+        email,
+        phone,
+        message,
+        token
+      }
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      
+    
       axios.post(url, form)
-          .then(res =>console.log(res.data), setText(`Your form submit successfuly `))
-          .catch(err => console.log(err))
-}
+        .then(res => console.log(res.data), setText(`Your form submit successfuly ` , setNameErr(''), setPhoneErr(''), setEmailErr('') , setMsgErr('')))
+        .catch(err => console.log(err))
+    }
+  
+
+  }
+ 
   
   
     return (
@@ -77,17 +133,16 @@ function Contact2()
           <form onSubmit={handleOnClicked} autocomplete="off" >
                   <h3 class="title">Enroll Now</h3>
                   <h4 style={{color:"#0f0"}}>{text}</h4>
-            <div class="input-container">
+                  <div class="input-container">
                   <input
-                      type="text"
-                      name="name"
-                      class="input"
-                      placeholder='Name'
-                      onChange={nameOnChanged}
-                      id='name'
-                      value={name}
-                      required ={ true}/>
-             
+                    type="text"
+                    name="name"
+                    class="input"
+                    placeholder='Name'
+                    onChange={nameOnChanged}
+                    id='name'
+                    value={name} />
+                  {name.length > 1 ? "" : <p className='errormsg'>{ nameErr}</p> }
             </div>
             <div class="input-container">
                   <input
@@ -97,10 +152,10 @@ function Contact2()
                     placeholder='Email'
                     onChange={emailOnChanged}
                     id='email'
-                      value={email}
-                      required ={ true}
+                    value={email}
+                   
                   />
-            
+                  {email.length > 1 ? "" : <p className='errormsg'>{ emailErr}</p> }
             </div>
             <div class="input-container">
                   <input
@@ -109,10 +164,9 @@ function Contact2()
                     class="input"
                     placeholder='Phone'
                     onChange={phoneOnChanged}
-                      id='phone'
-                      required ={ true}
+                    id='phone'
                     value={phone} />
-            
+                 {phone.length > 1 ? "" : <p className='errormsg'>{ phoneErr}</p> }
             </div>
             <div class="input-container textarea">
                   <textarea name="message"
@@ -120,9 +174,9 @@ function Contact2()
                     placeholder='Message'
                     onChange={msgOnChanged}
                     id='message'
-                    value={message}  required ={ true}></textarea>
-              {/* <label for="">Message</label>
-              <span>Message</span> */}
+                    value={message} ></textarea>
+                  {message.length > 1 ? "" : <p className='errormsg'>{ msgErr}</p> }
+
             </div>
             <input type="submit" value="Send" class="btn-2" />
           </form>

@@ -1,7 +1,10 @@
 import axios from 'axios'
 import React ,{useState}from 'react'
 import {FacebookShareButton , TwitterShareButton , LinkedinShareButton } from 'react-share'
-import {FacebookIcon,TwitterIcon, LinkedinIcon} from 'react-share'
+import { FacebookIcon, TwitterIcon, LinkedinIcon } from 'react-share'
+
+
+
 
 function Contact2()
 {
@@ -12,12 +15,19 @@ const [email, setEmail] = useState('')
 const [phone, setPhone] = useState('')
 const [message, setMessage] = useState('')
 const [text, setText] = useState('')
+const [nameErr, setNameErr] = useState('')
+const [emailErr, setEmailErr] = useState('')
+const [phoneErr, setPhoneErr] = useState('')
+const [msgErr, setMsgErr] = useState('')
+  
+
+
 
 // onChange function
 
 const nameOnChanged = (e) =>
 {
-    setName(e.target.value)
+  setName(e.target.value)
 }
 
 const emailOnChanged = (e) =>
@@ -36,25 +46,71 @@ const msgOnChanged = (e) =>
 
 //   onClick function
 
-const handleOnClicked = (e) => {
+  const handleOnClicked = (e) =>
+  {
     e.preventDefault()
 
-    const form = {
+
+    if (name.length > 0 ) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+ 
+    } else {
+      setNameErr(' name is required!')
+    }
+    // email 
+    if (email.length > 0) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } else {
+      setEmailErr(' email is required!')
+    }
+    // phone 
+    if (phone.length > 0) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } else {
+      setPhoneErr(' phone is required!')
+    }
+    // message 
+    if (message.length > 0) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } else {
+      setMsgErr(' message is required!')
+    }
+
+    // success !! 
+    if (name.length > 1, email.length > 1, phone.length > 1, message.length > 1) {
+      const form = {
         name,
         email,
         phone,
         message,
         token
-    }
-
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
-    axios.post(url, form)
-        .then(res =>console.log(res.data) , setText(`Your form submit successfuly `))
+      }
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      
+    
+      axios.post(url, form)
+        .then(res => console.log(res.data), setText(`Your form submit successfuly ` , setNameErr(''), setPhoneErr(''), setEmailErr('') , setMsgErr('')))
         .catch(err => console.log(err))
-}
+    }
+  
+
+  }
+ 
 
   
     return (
@@ -131,8 +187,9 @@ const handleOnClicked = (e) => {
                     placeholder='Name'
                     onChange={nameOnChanged}
                     id='name'
-                    required ={ true}
                     value={name} />
+                  {name.length > 1 ? "" : <p className='errormsg'>{ nameErr}</p> }
+                  
              
             </div>
             <div class="input-container">
@@ -144,8 +201,9 @@ const handleOnClicked = (e) => {
                     onChange={emailOnChanged}
                     id='email'
                     value={email}
-                    required ={ true}
+                   
                   />
+                  {email.length > 1 ? "" : <p className='errormsg'>{ emailErr}</p> }
             
             </div>
             <div class="input-container">
@@ -156,8 +214,10 @@ const handleOnClicked = (e) => {
                     placeholder='Phone'
                     onChange={phoneOnChanged}
                     id='phone'
-                    required ={ true}
                     value={phone} />
+                 {phone.length > 1 ? "" : <p className='errormsg'>{ phoneErr}</p> }
+
+
             
             </div>
             <div class="input-container textarea">
@@ -166,10 +226,11 @@ const handleOnClicked = (e) => {
                     placeholder='Message'
                     onChange={msgOnChanged}
                     id='message'
-                    required ={ true}
                     value={message} ></textarea>
-              {/* <label for="">Message</label>
-              <span>Message</span> */}
+                  {message.length > 1 ? "" : <p className='errormsg'>{ msgErr}</p> }
+                  
+                  
+              
                 </div>
             <input type="submit" value="Send" class="btn-2" />
           </form>
@@ -181,4 +242,3 @@ const handleOnClicked = (e) => {
 }
 
 export default Contact2
-
