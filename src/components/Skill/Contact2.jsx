@@ -131,6 +131,7 @@ const handleOnClicked = (e) => {
                     placeholder='Name'
                     onChange={nameOnChanged}
                     id='name'
+                    required ={ true}
                     value={name} />
              
             </div>
@@ -143,6 +144,7 @@ const handleOnClicked = (e) => {
                     onChange={emailOnChanged}
                     id='email'
                     value={email}
+                    required ={ true}
                   />
             
             </div>
@@ -154,6 +156,7 @@ const handleOnClicked = (e) => {
                     placeholder='Phone'
                     onChange={phoneOnChanged}
                     id='phone'
+                    required ={ true}
                     value={phone} />
             
             </div>
@@ -163,6 +166,7 @@ const handleOnClicked = (e) => {
                     placeholder='Message'
                     onChange={msgOnChanged}
                     id='message'
+                    required ={ true}
                     value={message} ></textarea>
               {/* <label for="">Message</label>
               <span>Message</span> */}

@@ -79,13 +79,14 @@ function Contact2()
                   <h4 style={{color:"#0f0"}}>{text}</h4>
             <div class="input-container">
                   <input
-                    type="text"
-                    name="name"
-                    class="input"
-                    placeholder='Name'
-                    onChange={nameOnChanged}
-                    id='name'
-                    value={name} />
+                      type="text"
+                      name="name"
+                      class="input"
+                      placeholder='Name'
+                      onChange={nameOnChanged}
+                      id='name'
+                      value={name}
+                      required ={ true}/>
              
             </div>
             <div class="input-container">
@@ -96,7 +97,8 @@ function Contact2()
                     placeholder='Email'
                     onChange={emailOnChanged}
                     id='email'
-                    value={email}
+                      value={email}
+                      required ={ true}
                   />
             
             </div>
@@ -107,7 +109,8 @@ function Contact2()
                     class="input"
                     placeholder='Phone'
                     onChange={phoneOnChanged}
-                    id='phone'
+                      id='phone'
+                      required ={ true}
                     value={phone} />
             
             </div>
@@ -117,7 +120,7 @@ function Contact2()
                     placeholder='Message'
                     onChange={msgOnChanged}
                     id='message'
-                    value={message} ></textarea>
+                    value={message}  required ={ true}></textarea>
               {/* <label for="">Message</label>
               <span>Message</span> */}
             </div>
