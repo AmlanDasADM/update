@@ -40,12 +40,12 @@ function Preview()
                                 </button></h2>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                        <button type="button" class="btn video-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-                        🧿 VIDEO: What is serverless? 
-                        </button>
+                        <p className="video-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                            <i className="fas fa-play-circle"></i> VIDEO: What is serverless?
+                        </p>
                     
                         <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="staticBackdropLabel">React media player</h5>
@@ -61,7 +61,7 @@ function Preview()
                     </div>
                 </div>
                 <div className="body">
-                    <p>🧿 How does serverless scale?</p> 
+                    <p><i class="fas fa-play-circle"></i>  How does serverless scale?</p>
                 </div>
             </div>
         </div>
@@ -72,14 +72,12 @@ function Preview()
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                ✅ LAMDA
+                                ✅ LAMBDA
                                 </button></h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>
-                                <button type="button" class="btn video-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-                                🧿 VIDEO: What is serverless? 
-                                </button>
+                            <p className="video-button" data-bs-toggle="modal modal-lg" data-bs-target="#staticBackdrop2">
+                                <i className="fas fa-play-circle"></i>  VIDEO: What is serverless?
                             </p>
                         <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -98,15 +96,15 @@ function Preview()
                     </div>
                 </div>
                 <div className="body">
-                                            <p>🧿 Lambda 101</p> 
-                                            <p>🧿 Creating a lambda function </p> 
+                                            <p><i class="fas fa-file"></i>  Lambda 101</p> 
+                                            <p><i class="fas fa-file"></i>  Creating a lambda function </p> 
                                             <p className='py'> 1.Python 3.8</p>
                                             <p className='py'> 2.Nodejs 10x</p> 
-                                            <p>🧿Understanding lambda event</p>  
-                                            <p>🧿 Accessing lambda’s log</p>  
-                                            <p>🧿 Create a test payload for testing</p>  
-                                            <p>🧿 Run and test a lambda function from AWS console</p>  
-                                            <p>🧿  Assign IAM role to grant permission to lambda</p>  
+                                            <p><i class="fas fa-file"></i> Understanding lambda event</p>  
+                                            <p><i class="fas fa-file"></i>  Accessing lambda’s log</p>  
+                                            <p><i class="fas fa-file"></i>  Create a test payload for testing</p>  
+                                            <p><i class="fas fa-file"></i>  Run and test a lambda function from AWS console</p>  
+                                            <p><i class="fas fa-file"></i>   Assign IAM role to grant permission to lambda</p>  
                 </div>
             </div>
         </div>
@@ -140,14 +138,14 @@ function Preview()
                     </div>
                 </div>
                 <div className="body">
-                                            <p>🧿 API Gateway 101</p> 
-                                            <p>🧿 Create a REST API  </p> 
-                                            <p>🧿 Create a resource and method</p>
-                                            <p>🧿 Integrate lambda with a method</p> 
-                                            <p>🧿 Lambda proxy integration</p>  
-                                            <p>🧿 Enable CORS</p>  
-                                            <p>🧿 Deploy APIs on dev staging</p>  
-                                            <p>🧿 Test API via Postman</p>  
+                                            <p><i class="fas fa-file"></i>  API Gateway 101</p> 
+                                            <p><i class="fas fa-file"></i>  Create a REST API  </p> 
+                                            <p><i class="fas fa-file"></i>  Create a resource and method</p>
+                                            <p><i class="fas fa-file"></i>  Integrate lambda with a method</p> 
+                                            <p><i class="fas fa-file"></i>  Lambda proxy integration</p>  
+                                            <p><i class="fas fa-file"></i>  Enable CORS</p>  
+                                            <p><i class="fas fa-file"></i>  Deploy APIs on dev staging</p>  
+                                            <p><i class="fas fa-file"></i>  Test API via Postman</p>  
                 </div>
             </div>
         </div>
@@ -161,7 +159,7 @@ function Preview()
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                         <button type="button" class="btn video-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
-                        {/* 🧿 VIDEO: What is serverless?  */}
+                        {/* <i class="fas fa-file"></i>  VIDEO: What is serverless?  */}
                         </button>
                     
                         <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -181,12 +179,12 @@ function Preview()
                     </div>
                 </div>
                 <div className="body">
-                                            <p>🧿 What is dynamodb?</p> 
-                                            <p>🧿 Create a table  </p> 
-                                            <p>🧿 Create a record manually </p>
-                                            <p>🧿 Connect lambda to dynamodb by boto3</p> 
-                                            <p>🧿 CRUD operation on dynamodb table</p>  
-                                            <p>🧿 Test API via postman</p>  
+                                            <p><i class="fas fa-file"></i>  What is dynamodb?</p> 
+                                            <p><i class="fas fa-file"></i>  Create a table  </p> 
+                                            <p><i class="fas fa-file"></i>  Create a record manually </p>
+                                            <p><i class="fas fa-file"></i>  Connect lambda to dynamodb by boto3</p> 
+                                            <p><i class="fas fa-file"></i>  CRUD operation on dynamodb table</p>  
+                                            <p><i class="fas fa-file"></i>  Test API via postman</p>  
                                             
                 </div>
             </div>
@@ -221,10 +219,10 @@ function Preview()
                     </div>
                 </div>
                 <div className="body">
-                                            <p>🧿 Apply load and stress test on API </p> 
-                                            <p>🧿 Create python script to create 1000 concurrent POST requests  </p> 
-                                            <p>🧿 Change various parameters  </p>
-                                            <p>🧿 Observe how serverless scale out on-demand</p> 
+                                            <p><i class="fas fa-file"></i>  Apply load and stress test on API </p> 
+                                            <p><i class="fas fa-file"></i>  Create python script to create 1000 concurrent POST requests  </p> 
+                                            <p><i class="fas fa-file"></i>  Change various parameters  </p>
+                                            <p><i class="fas fa-file"></i>  Observe how serverless scale out on-demand</p> 
                 </div>
             </div>
         </div>
@@ -258,10 +256,10 @@ function Preview()
                     </div>
                 </div>
                 <div className="body">
-                                            <p>🧿 Designing microservices  </p> 
-                                            <p>🧿 Monitoring and logging    </p> 
-                                            <p>🧿 Change various parameters  </p>
-                                            <p>🧿 Observe how serverless scale out on-demand</p> 
+                                            <p><i class="fas fa-file"></i>  Designing microservices  </p> 
+                                            <p><i class="fas fa-file"></i>  Monitoring and logging    </p> 
+                                            <p><i class="fas fa-file"></i>  Change various parameters  </p>
+                                            <p><i class="fas fa-file"></i>  Observe how serverless scale out on-demand</p> 
                 </div>
             </div>
         </div>
