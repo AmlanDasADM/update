@@ -27,16 +27,16 @@ console.log("window height is " + size)
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-                            <NavLink exact activeClassName='active-page ' className="nav-link" to="/home"> <i class="fas fa-book-open"></i> Home</NavLink>
+                        <NavLink exact activeClassName='active-page ' className="nav-link" to="/"> <i class="fas fa-book-open"></i> Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact activeClassName='active-page '  className="nav-link"  to="/about"> <i class="fas fa-book-open"></i> About</NavLink>
+                            <NavLink exact activeClassName='active-page '  className="nav-link disabled"  to="/about"> <i class="fas fa-book-open"></i> About</NavLink>
                         </li> 
                         <li className="nav-item">    
-                            <NavLink exact activeClassName='active-page'  className="nav-link"  to="/" ><i class="fas fa-rocket"></i> Skill</NavLink>
+                            <NavLink exact activeClassName='active-page'  className="nav-link disabled"  to="/skill" ><i class="fas fa-rocket"></i> Skill</NavLink>
                         </li>
                         <li className="nav-item">   
-                            <NavLink exact activeClassName='active-page'  className="nav-link" to="/contact"><i class="fas fa-mobile-alt"></i> Contact</NavLink>
+                            <NavLink exact activeClassName='active-page'  className="nav-link disabled" to="/contact"><i class="fas fa-mobile-alt"></i> Contact</NavLink>
                         </li>   
       </ul>
     </div>

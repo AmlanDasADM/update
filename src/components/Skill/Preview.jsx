@@ -1,30 +1,15 @@
 import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
-
-                        
-                    function LoadMore({ children = 4 })
-                    {
-                        const text = children 
-                        const [trunked, setTrunked] = useState(true)
-                        const resultString = trunked ? text.slice(0, 4) : text;
-                         const handleOnClick = () =>
-                        {
-                            setTrunked(!trunked)
-                        }
-                        return (
-                            <div className="collapsed-div-preview">
-                                <p className='has-text-left'>
-                                {resultString}
-                                    <div className="button">
-                                        <button className="btn-3" onClick={handleOnClick}>{trunked ? "Show All" : "Show less"} </button>
-                                    </div>
-                                </p>
-                            </div>    
-                        )
-                    }
-                    
+import ModalVideo1 from 'react-modal-video'
+import ModalVideo2 from 'react-modal-video'
+import ModalVideo3 from 'react-modal-video'
+import "./skill.css"
+import 'react-modal-video/scss/modal-video.scss';
 function Preview()
-        {              
+{   
+    const [isOpen, setOpen] = useState(false)
+    const [isOpen1, setOpen1] = useState(false)
+    const [isOpen2, setOpen2] = useState(false)
          return (
                 <>
                     <div className="preview-content">
@@ -32,7 +17,8 @@ function Preview()
                             <h3>Preview Content</h3>
                      </div>
                      <div className="preview-box">
-                        <LoadMore class="accordion" id="accordionExample">
+                 
+                        <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
@@ -40,26 +26,12 @@ function Preview()
                                 </button></h2>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                        <p className="video-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-                            <i className="fas fa-play-circle"></i> VIDEO: What is serverless?
+                        <p className="video-button" data-bs-toggle="modal" >
+                <React.Fragment>
+		        <ModalVideo1 channel='youtube' autoplay isOpen={isOpen1} videoId="UxPkK8gW0hs" onClose={() => setOpen1(false)} />
+                <button className="btn video-button" onClick={()=> setOpen1(true)}> <i className="fas fa-play-circle"></i>  VIDEO: What is serverless? </button>
+                </React.Fragment>
                         </p>
-                    
-                        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">React media player</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></   button>
-                                </div>
-                                <div class="modal-body">
-                                <ReactPlayer url="https://www.youtube.com/watch?v=oluY633rkgI" controls={true} height="100%" width="100%"/>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div className="body">
                     <p><i class="fas fa-play-circle"></i>  How does serverless scale?</p>
                 </div>
@@ -76,25 +48,12 @@ function Preview()
                                 </button></h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p className="video-button" data-bs-toggle="modal modal-lg" data-bs-target="#staticBackdrop2">
-                                <i className="fas fa-play-circle"></i>  VIDEO: What is serverless?
+                            <p className="video-button" data-bs-toggle="modal modal-lg" data-bs-target="#staticBackdrop2" >
+                            <React.Fragment>
+		        <ModalVideo2 channel='youtube' autoplay isOpen={isOpen2} videoId="LIXcyGW2YDM" onClose={() => setOpen2(false)} />
+                <button className="btn video-button" onClick={()=> setOpen2(true)}> <i className="fas fa-play-circle"></i>  VIDEO: What is serverless? </button>
+                </React.Fragment>
                             </p>
-                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">React media player</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></   button>
-                                </div>
-                                <div class="modal-body">
-                                <ReactPlayer url="https://www.youtube.com/watch?v=oluY633rkgI" controls={true} height="100%" width="100%"/>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div className="body">
                                             <p><i class="fas fa-file"></i>  Lambda 101</p> 
                                             <p><i class="fas fa-file"></i>  Creating a lambda function </p> 
@@ -264,8 +223,10 @@ function Preview()
             </div>
         </div>
                              </div>
-                      
- </LoadMore>
+                
+                             </div>
+                             
+                             
 </div>
 </div> 
                             </>

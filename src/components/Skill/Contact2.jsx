@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, {useState} from 'react'
 import {FacebookShareButton, TwitterShareButton, LinkedinShareButton} from 'react-share'
 import {FacebookIcon, TwitterIcon, LinkedinIcon} from 'react-share'
-
+import cartoon from "../../images/teacher.jpg"
 
 function Contact2() {
     const url = "https://sj6wyyl2fc.execute-api.ap-southeast-1.amazonaws.com/dev/save-contact"
@@ -10,12 +10,10 @@ function Contact2() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
-    const [message, setMessage] = useState('')
     const [text, setText] = useState('')
     const [nameErr, setNameErr] = useState('')
     const [emailErr, setEmailErr] = useState('')
     const [phoneErr, setPhoneErr] = useState('')
-    const [msgErr, setMsgErr] = useState('')
 
 
 // onChange function
@@ -31,9 +29,7 @@ function Contact2() {
         setPhone(e.target.value)
     }
 
-    const msgOnChanged = (e) => {
-        setMessage(e.target.value)
-    }
+ 
 
 //   onClick function
 
@@ -42,59 +38,48 @@ function Contact2() {
 
 
         if (name.length > 0) {
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
+            // setName("");
+            // setEmail("");
+            // setPhone("");
+            // setMessage("");
 
         } else {
             setNameErr(' name is required!')
         }
         // email
         if (email.length > 0) {
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
+            // setName("");
+            // setEmail("");
+            // setPhone("");
+            // setMessage("");
         } else {
             setEmailErr(' email is required!')
         }
         // phone
         if (phone.length > 0) {
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
+            // setName("");
+            // setEmail("");
+            // setPhone("");
+            // setMessage("");
         } else {
             setPhoneErr(' phone is required!')
         }
-        // message
-        if (message.length > 0) {
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
-        } else {
-            setMsgErr(' message is required!')
-        }
 
         // success !!
-        if (name.length > 1, email.length > 1, phone.length > 1, message.length > 1) {
+        if (name.length > 1, email.length > 1, phone.length > 1) {
             const form = {
                 name,
                 email,
                 phone,
-                message,
                 token
             }
             setName("");
             setEmail("");
             setPhone("");
-            setMessage("");
 
 
             axios.post(url, form)
-                .then(res => console.log(res.data), setText(`Your form submit successfuly `, setNameErr(''), setPhoneErr(''), setEmailErr(''), setMsgErr('')))
+                .then(res => console.log(res.data), setText(`Your form submit successfuly `, setNameErr(''), setPhoneErr(''), setEmailErr('')))
                 .catch(err => console.log(err))
         }
 
@@ -125,7 +110,6 @@ function Contact2() {
                         </div>
 
                         <div class="social-media mb-3">
-                            <p>Connect with us :</p>
                             <div className="social-media-2 m-auto">
                                 <p>Connect with us :</p>
                                 <div className="social-icons-2 m-auto">
@@ -142,7 +126,7 @@ function Contact2() {
                             <p><i class="fas fa-share"></i> Share Our Web:</p>
                             <div class="social-icons-share ">
                                 <FacebookShareButton className='m-2' url="skill-page.herokuapp.com"
-                                                     quote="Hey! Visit Our WebSite">
+                                                     quote="Hey! Visit Our WebSite" imageUrl={cartoon}>
                                     <FacebookIcon logoFillColor="white" round={true} size={35}></FacebookIcon>
                                 </FacebookShareButton>
                                 <LinkedinShareButton className='m-2' url="skill-page.herokuapp.com"
@@ -203,7 +187,7 @@ function Contact2() {
 
 
                             </div>
-                            <div class="input-container textarea">
+                            {/* <div class="input-container textarea">
                   <textarea name="message"
                             class="input"
                             placeholder='Message'
@@ -213,7 +197,7 @@ function Contact2() {
                                 {message.length > 1 ? "" : <p className='errormsg'>{msgErr}</p>}
 
 
-                            </div>
+                            </div> */}
                             <input type="submit" value="Enroll" class="btn-2"/>
                         </form>
                     </div>

@@ -105,34 +105,11 @@ function skill() {
                             <ReactPlayer url="https://www.youtube.com/watch?v=oluY633rkgI" controls={true} height="100%"
                                          width="100%"/>
                         </div>
-                        <div className="course-details-button">
-                            <button type="button" class="btn-21" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdropContact">
-                                Enroll Now
-                            </button>
 
-                            <div class="modal fade" id="staticBackdropContact" data-bs-backdrop="static"
-                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                 aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="contact-modal-content modal-content">
-                                        <div class="contact-modal-header bg-white modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Enroll now</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></   button>
-                                        </div>
-                                        <div class="contact-modal-body modal-body">
-                                            <Contact/>
-                                        </div>
-                                        <div class="contact-modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Close
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                       
+                                            <Contact />
+                                 
                     </div>
 
                 </div>
@@ -192,7 +169,10 @@ function skill() {
                                     </div>
 
                                 </div>
-                                <div className="about-inner-box">
+                           
+                            </div>
+                            <div className="about-box-2nd-line">
+                            <div className="about-inner-box">
                                     <div className="about-box-img">
                                         <img src={faqImg1} alt="" srcset=""/>
                                     </div>
@@ -208,8 +188,6 @@ function skill() {
                                         <p>🧿 Q&A session on each lecture </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="about-box-2nd-line">
                                 <div className="about-inner-box">
                                     <div className="about-box-img">
                                         <img src={faqImg3} alt="" srcSet=""/>

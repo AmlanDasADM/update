@@ -4,7 +4,9 @@ import {FacebookShareButton, TwitterShareButton, LinkedinShareButton} from 'reac
 import {FacebookIcon, TwitterIcon, LinkedinIcon} from 'react-share'
 
 
-function Contact2() {
+function Contact2()
+{
+ 
     const url = "https://sj6wyyl2fc.execute-api.ap-southeast-1.amazonaws.com/dev/save-contact"
     const token = "a25db276-58a9-11ec-bf63-0242ac130002"
     const [name, setName] = useState('')
@@ -31,49 +33,46 @@ function Contact2() {
         setPhone(e.target.value)
     }
 
-    const msgOnChanged = (e) => {
-        setMessage(e.target.value)
-    }
-
 //   onClick function
 
     const handleOnClicked = (e) => {
         e.preventDefault()
-
-
+        
         if (name.length > 0) {
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
+            // setName("");
+            // setEmail("");
+            // setPhone("");
+            // setMessage("");
 
         } else {
             setNameErr(' name is required!')
         }
+        
         // email
         if (email.length > 0) {
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
+            // setName("");
+            // setEmail("");
+            // setPhone("");
+            // setMessage("");
         } else {
             setEmailErr(' email is required!')
         }
+
         // phone
         if (phone.length > 0) {
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
+            // setName("");
+            // setEmail("");
+            // setPhone("");
+            // setMessage("");
         } else {
             setPhoneErr(' phone is required!')
         }
         // message
         if (message.length > 0) {
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
+            // setName("");
+            // setEmail("");
+            // setPhone("");
+            // setMessage("");
         } else {
             setMsgErr(' message is required!')
         }
@@ -99,25 +98,43 @@ function Contact2() {
         }
 
 
-    }
 
+
+    }
 
     return (
         <>
+             <div className="course-details-button">
+                            <button type="button" class="btn-21" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdropContact">
+                                Enroll Now
+                            </button>
+
+                            <div class="modal fade" id="staticBackdropContact" data-bs-backdrop="static"
+                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="contact-modal-content modal-content">
+                                        <div class="contact-modal-header  modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Enroll now</h5>
+                                            <button  type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close" ></button>
+                                        </div>
+                                        <div class="contact-modal-body modal-body">
             <div class="container-form-2" id='contact'>
                 {/* <span class="big-circle"></span> */}
                 {/* <img src="img/shape.png" class="square" alt="" /> */}
                 <div class="form-2">
                     <div class="contact-info">
-                        <h3 class="title">Enroll Now </h3>
+                        <h3 class="title"></h3>
 
                         <div class="contact-form">
                             <span class="circle one"></span>
                             <span class="circle two"></span>
 
                             <form onSubmit={handleOnClicked} autocomplete="off">
-                                <h3 class="title">Enroll Now</h3>
-                                <h4 style={{color: "#0f0"}}>{text}</h4>
+                                {/* <h3 class="title">Enroll Now</h3> */}
+                                <h5 style={{color: "#0f0" , fontWeight:"bold"}}>{text}</h5>
                                 <div class="input-container">
                                     <input
                                         type="text"
@@ -153,7 +170,7 @@ function Contact2() {
                                         value={phone}/>
                                     {phone.length > 1 ? "" : <p className='errormsg'>{phoneErr}</p>}
                                 </div>
-                                <div class="input-container textarea">
+                                {/* <div class="input-container textarea">
                   <textarea name="message"
                             class="input"
                             placeholder='Message'
@@ -162,7 +179,7 @@ function Contact2() {
                             value={message}></textarea>
                                     {message.length > 1 ? "" : <p className='errormsg'>{msgErr}</p>}
 
-                                </div>
+                                </div> */}
                                 <input type="submit" value="Enroll" class="btn-2"/>
                             </form>
                         </div>
@@ -211,6 +228,16 @@ function Contact2() {
 
                 </div>
             </div>
+            </div>
+                                        <div class="contact-modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
         </>
     )
 }
