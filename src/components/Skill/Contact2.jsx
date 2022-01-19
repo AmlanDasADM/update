@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import {FacebookShareButton, TwitterShareButton, LinkedinShareButton} from 'react-share'
+import {FacebookButton, TwitterButton, LinkedinButton} from 'react-social'
 import {FacebookIcon, TwitterIcon, LinkedinIcon} from 'react-share'
 import cartoon from "../../images/teacher.jpg"
 
@@ -85,7 +86,7 @@ function Contact2() {
 
 
     }
-
+    var link = "skill-page.herokuapp.com";
 
     return (
         <>
@@ -126,17 +127,18 @@ function Contact2() {
                             <p><i class="fas fa-share"></i> Share Our Web:</p>
                             <div class="social-icons-share ">
                                 <FacebookShareButton className='m-2' url="skill-page.herokuapp.com"
-                                                     quote="Hey! Visit Our WebSite" imageUrl={cartoon}>
+                                                     quote="Hey!Visit Our WebSite" imageUrl={cartoon} img={cartoon}>
                                     <FacebookIcon logoFillColor="white" round={true} size={35}></FacebookIcon>
                                 </FacebookShareButton>
                                 <LinkedinShareButton className='m-2' url="skill-page.herokuapp.com"
-                                                     quote="Hey! Visit Our WebSite">
+                                                     Title="Hey! Visit Our WebSite"  summary="Visit Our WebSite" source="Visit  WebSite">
                                     <LinkedinIcon logoFillColor="white" round={true} size={35}></LinkedinIcon>
                                 </LinkedinShareButton>
-                                <TwitterShareButton className='m-2' url="skill-page.herokuapp.com"
+                                {/* <TwitterShareButton className='m-2' url="skill-page.herokuapp.com"
                                                     quote="Hey! Visit Our WebSite">
                                     <TwitterIcon logoFillColor="white" round={true} size={35}></TwitterIcon>
-                                </TwitterShareButton>
+                                </TwitterShareButton> */}
+                               
                             </div>
                         </div>
                     </div>

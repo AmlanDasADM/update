@@ -128,7 +128,7 @@ function skill() {
                                         <img src={faqImg2} alt="" srcset=""/>
                                     </div>
                                     <div className="about-box-heading">
-                                        <h5>Q.To whom the course is?</h5>
+                                        <h5>Q. To whom the course is?</h5>
                                     </div>
                                     <div className="about-box-para">
                                         <p>🧿 Someone have keen interest in AWS public cloud</p>
@@ -160,7 +160,7 @@ function skill() {
                                         <img src={faqImg2} alt="" srcSet=""/>
                                     </div>
                                     <div className="about-box-heading">
-                                        <h5>Q.Where do you apply your knowledge of this course?</h5>
+                                        <h5>Q. Where do you apply your knowledge of this course?</h5>
                                     </div>
                                     <div className="about-box-para">
                                         <p>🧿 This course is like a gateway to enter AWS world</p>
@@ -177,7 +177,7 @@ function skill() {
                                         <img src={faqImg1} alt="" srcset=""/>
                                     </div>
                                     <div className="about-box-heading">
-                                        <h5>Q.What is the course culture?</h5>
+                                        <h5>Q. What is the course culture?</h5>
                                     </div>
                                     <div className="about-box-para">
                                         <p>🧿 2 days per week live session.</p>
