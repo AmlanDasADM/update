@@ -195,18 +195,15 @@ function Contact2()
                         <div class="social-media-share">
                             <p><i class="fas fa-share"></i> Share Our Web:</p>
                             <div class="social-icons-share ">
-                                <FacebookShareButton className='m-2' url="skill-page.herokuapp.com"
-                                                     quote="Hey! Visit Our WebSite">
+                                <FacebookShareButton className='m-2' url="https://learning.fractalslab.com/"
+                                                     quote="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS.">
                                     <FacebookIcon logoFillColor="white" round={true} size={35}></FacebookIcon>
                                 </FacebookShareButton>
-                                <LinkedinShareButton className='m-2' url="skill-page.herokuapp.com"
+                                <LinkedinShareButton className='m-2' url="https://learning.fractalslab.com/"
                                                      quote="Hey! Visit Our WebSite">
                                     <LinkedinIcon logoFillColor="white" round={true} size={35}></LinkedinIcon>
                                 </LinkedinShareButton>
-                                <TwitterShareButton className='m-2' url="skill-page.herokuapp.com"
-                                                    quote="Hey! Visit Our WebSite">
-                                    <TwitterIcon logoFillColor="white" round={true} size={35}></TwitterIcon>
-                                </TwitterShareButton>
+                               
                             </div>
                         </div>
                     </div>

@@ -126,12 +126,12 @@ function Contact2() {
                         <div class="social-media-share">
                             <p><i class="fas fa-share"></i> Share Our Web:</p>
                             <div class="social-icons-share ">
-                                <FacebookShareButton className='m-2' url="skill-page.herokuapp.com"
-                                                     quote="Hey!Visit Our WebSite" imageUrl={cartoon} img={cartoon}>
+                                <FacebookShareButton className='m-2' url="https://learning.fractalslab.com/"
+                                                     quote="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS." imageUrl={cartoon} img={cartoon}>
                                     <FacebookIcon logoFillColor="white" round={true} size={35}></FacebookIcon>
                                 </FacebookShareButton>
-                                <LinkedinShareButton className='m-2' url="skill-page.herokuapp.com"
-                                                     Title="Hey! Visit Our WebSite"  summary="Visit Our WebSite" source="Visit  WebSite">
+                                <LinkedinShareButton className='m-2' url="https://learning.fractalslab.com/"
+                                                     Title="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS."  summary="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS." >
                                     <LinkedinIcon logoFillColor="white" round={true} size={35}></LinkedinIcon>
                                 </LinkedinShareButton>
                                 {/* <TwitterShareButton className='m-2' url="skill-page.herokuapp.com"
