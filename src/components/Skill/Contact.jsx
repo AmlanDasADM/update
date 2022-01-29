@@ -102,7 +102,7 @@ function Contact2()
                                 <div class="modal-dialog">
                                     <div class="contact-modal-content modal-content">
                                         <div class="contact-modal-header  modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Enroll now</h5>
+                                            <h3 class="modal-title" id="staticBackdropLabel">Enroll now</h3>
                                             <button  type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close" ></button>
                                         </div>
@@ -213,9 +213,9 @@ function Contact2()
             </div>
             </div>
                                         <div class="contact-modal-footer">
-                                            <button type="button" class="btn btn-secondary"
+                                            {/* <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close
-                                            </button>
+                                            </button> */}
                                         </div>
                                     </div>
                                 </div>

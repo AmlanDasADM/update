@@ -10,7 +10,7 @@
 }
 .navbar {
     margin-bottom: 2rem;
-    position: relative;
+    /* position: relative; */
 }
 .fade-in{
     position: fixed;
@@ -67,24 +67,29 @@
 
 .navbar-brand{
     font-size: 40px;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto Mono', monospace; */
     color: #3c77b1;
-
-
+}
+.navItemResponsive{
+    display: none;
 }
 .navbar-light .navbar-brand {
     color: #3c77b1;
     font-weight: 900;
 }
-@media (max-width:1000px) {
+@media (max-width:985px) {
     .bla{
         height: 80px;
+    }
+    .navItemResponsive{
+        display: block;
     }
     .navbar{
         height: 82px;
     }
     .nav-item{
-        font-size: 20px;
+        font-size: 18px;
         font-family: 'Jost', sans-serif;
         margin: 0rem;
         text-align: start;
@@ -111,6 +116,9 @@
         color: white;
         text-align: start;
     
+    }
+    .navbar-brand{
+        margin-left: 0.9rem;
     }
     
     

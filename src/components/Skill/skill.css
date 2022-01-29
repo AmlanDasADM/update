@@ -343,7 +343,7 @@
 }
 
 .about-inner-box {
-    height: 600px;
+    height: 620px;
     width: 100%;
     margin: 2rem;
     background-color: #f8f8f8;
@@ -364,7 +364,7 @@
 }
 
 .about-box-2nd-line {
-    height: 700px;
+    height: fit-content;
     width: 70%;
     display: flex;
     justify-content: space-between;
@@ -506,7 +506,7 @@
 
 @media (max-width: 1050px) {
     .about-inner-box {
-        height: fit-content;
+        height: 750px;
         width: 100%;
     }
 
@@ -537,8 +537,11 @@
         background-color: #f8f8f8;
     }
 }
+.left-side-title-responsive {
+    display: none;
+}
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
     .our-course-heading {
         margin: auto;
         text-align: center;
@@ -674,7 +677,7 @@
     }
 
     .preview-content {
-        margin-left: 1rem;
+        margin-left: 0rem;
     }
 
     .left-side-aboutUs {
@@ -682,11 +685,23 @@
     }
 
     .left-side-title {
-        margin-left: 1rem;
+        margin-left: 0rem;
+        padding: 1rem;
+        display: none;
+    }
+    .left-side-title-responsive {
+        margin-left: 0rem;
+        padding: 1rem;
+        display: block;
     }
 
     .left-side-teacher {
         margin-left: 1rem;
+    }
+    .our-course-heading h2 {
+        font-weight: 700;
+        font-family: 'Jost', sans-serif;
+        font-size: 40px;
     }
 
     .course {
@@ -702,11 +717,11 @@
     }
 
     .accordion {
-        margin-left: 1rem;
+        margin-left: 0rem;
     }
 
     .accordion-item {
-        margin-left: 1rem;
+        margin-left: 0rem;
     }
 
     .faq {
@@ -736,6 +751,7 @@
 
     .right-side-container {
         margin-left: 0rem;
+        margin-bottom: 18rem;
     }
 }
 
@@ -821,7 +837,7 @@
     }
 
     .about-box-1st-line {
-        height: 125rem;
+        height: fit-content;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -1112,7 +1128,7 @@ textarea.input {
     border-radius: 50%;
     bottom: -77px;
     right: 50px;
-    opacity: 0.3;
+    opacity: 0;
 }
 
 .big-circle {
@@ -1154,9 +1170,12 @@ textarea.input {
     margin-top: 2rem;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
     .form {
         grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 1820px;
+
     }
 
     .contact-info:before {
@@ -1171,6 +1190,7 @@ textarea.input {
         left: initial;
         right: 70px;
     }
+   
 
     .square {
         transform: translate(140%, 43%);
@@ -1293,3 +1313,18 @@ textarea.input {
 .errormsg {
     color: red;
 }
+
+.container-form-responsive{
+    display: none;
+}
+.container-form{
+}
+@media (max-width:1025px) {
+    .container-form-responsive{
+        display: block;
+    }
+    .container-form{
+        display: none;
+    }
+}
+

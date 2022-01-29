@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import {FacebookShareButton, TwitterShareButton, LinkedinShareButton} from 'react-share'
-import {FacebookButton, TwitterButton, LinkedinButton} from 'react-social'
 import {FacebookIcon, TwitterIcon, LinkedinIcon} from 'react-share'
 import cartoon from "../../images/teacher.jpg"
 
@@ -36,7 +35,7 @@ function Contact2() {
 
     const handleOnClicked = (e) => {
         e.preventDefault()
-
+        
 
         if (name.length > 0) {
             // setName("");
@@ -86,12 +85,11 @@ function Contact2() {
 
 
     }
-    var link = "skill-page.herokuapp.com";
 
     return (
         <>
             <div class="container-form" id='contact'>
-                <span class="big-circle"></span>
+                {/* <span class="big-circle"></span> */}
                 <img src="img/shape.png" class="square" alt=""/>
                 <div class="form">
                     <div class="contact-info">
@@ -127,12 +125,12 @@ function Contact2() {
                             <p><i class="fas fa-share"></i> Share Our Web:</p>
                             <div class="social-icons-share ">
                                 <FacebookShareButton className='m-2' url="https://learning.fractalslab.com/"
-                                                     quote="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS." imageUrl={cartoon} img={cartoon}>
-                                    <FacebookIcon logoFillColor="white" round={true} size={35}></FacebookIcon>
+                                                     quote="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS." imageUrl={cartoon} img={cartoon} >
+                                    <FacebookIcon logoFillColor="white" round={true} size={45}></FacebookIcon>
                                 </FacebookShareButton>
                                 <LinkedinShareButton className='m-2' url="https://learning.fractalslab.com/"
-                                                     Title="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS."  summary="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS." >
-                                    <LinkedinIcon logoFillColor="white" round={true} size={35}></LinkedinIcon>
+                                                     summary="" >
+                                    <LinkedinIcon logoFillColor="white" round={true} size={45}></LinkedinIcon>
                                 </LinkedinShareButton>
                                 {/* <TwitterShareButton className='m-2' url="skill-page.herokuapp.com"
                                                     quote="Hey! Visit Our WebSite">
@@ -189,20 +187,119 @@ function Contact2() {
 
 
                             </div>
-                            {/* <div class="input-container textarea">
-                  <textarea name="message"
-                            class="input"
-                            placeholder='Message'
-                            onChange={msgOnChanged}
-                            id='message'
-                            value={message}></textarea>
-                                {message.length > 1 ? "" : <p className='errormsg'>{msgErr}</p>}
-
-
-                            </div> */}
-                            <input type="submit" value="Enroll" class="btn-2"/>
+                       
+                            <input type="submit" value="Enroll" class="btn-2" />
                         </form>
                     </div>
+                </div>
+            </div>
+
+
+            {/* responsive  */}
+            <div class="container-form-responsive" id='contact'>
+                {/* <span class="big-circle"></span> */}
+                <img src="img/shape.png" class="square" alt=""/>
+                <div class="form">
+                    <div class="contact-info">
+                        <h2 class="title text-capitalize">Let's get in touch </h2>
+                        <div class="contact-form">
+                        <span class="circle one"></span>
+                        <span class="circle two"></span>
+                        <form onSubmit={handleOnClicked} autocomplete="off">
+                            {/* <h3 class="title">Enroll Now</h3> */}
+                            <p style={{color: "#0f0"}}>{text}</p>
+                            <div class="input-container">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    class="input"
+                                    placeholder='Name'
+                                    onChange={nameOnChanged}
+                                    id='name'
+                                    value={name}/>
+                                {name.length > 1 ? "" : <p className='errormsg'>{nameErr}</p>}
+
+
+                            </div>
+                            <div class="input-container">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    class="input"
+                                    placeholder='Email'
+                                    onChange={emailOnChanged}
+                                    id='email'
+                                    value={email}
+
+                                />
+                                {email.length > 1 ? "" : <p className='errormsg'>{emailErr}</p>}
+
+                            </div>
+                            <div class="input-container">
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    class="input"
+                                    placeholder='Phone'
+                                    onChange={phoneOnChanged}
+                                    id='phone'
+                                    value={phone}/>
+                                {phone.length > 1 ? "" : <p className='errormsg'>{phoneErr}</p>}
+
+
+                            </div>
+                       
+                            <input type="submit" value="Enroll" class="btn-2" />
+                        </form>
+                    </div>
+                        <p class="text">
+                        </p>
+                        <div className="info mt-4 p-3">
+                            <div className="information">
+                                <p><i className="fas fa-map-marker-alt"></i> Mirpur, Dhaka - Bangladesh</p>
+                            </div>
+                            <div className="information">
+                                <p><i className="far fa-envelope"></i> mr.saiful.azad@gmail.com</p>
+                            </div>
+                            <div className="information">
+                                <p><i className="fas fa-phone-alt"></i> +8801676743076 </p>
+                            </div>
+                        </div>
+
+                        <div class="social-media mb-3">
+                            <div className="social-media-2 m-auto">
+                                <p>Connect with us :</p>
+                                <div className="social-icons-2 m-auto">
+                                    <a target="_blank" href="https://www.facebook.com/mr.saiful.azad">
+                                        <i className="fab fab-2 fa-facebook-f"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.linkedin.com/company/fractalslab">
+                                        <i className="fab fab-2 fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-media-share">
+                            <p><i class="fas fa-share"></i> Share Our Web:</p>
+                            <div class="social-icons-share ">
+                                <FacebookShareButton className='m-2' url="https://learning.fractalslab.com/"
+                                                     quote="How would it be if you can run your backend REST API totally free of cost within a reasonable amount of resource limit? Besides, you do not need to manage and provision servers based on traffic like Eid sale. Nowadays, developers only focus on feature development and managing servers is done by cloud platforms like AWS, GCP. Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we will leverage the power of FaSS to develop a serverless app from scratch on AWS." imageUrl={cartoon} img={cartoon} >
+                                    <FacebookIcon logoFillColor="white" round={true} size={45}></FacebookIcon>
+                                </FacebookShareButton>
+                                <LinkedinShareButton className='m-2' url="https://learning.fractalslab.com/"
+                                                     summary="" >
+                                    <LinkedinIcon logoFillColor="white" round={true} size={45}></LinkedinIcon>
+                                </LinkedinShareButton>
+                                {/* <TwitterShareButton className='m-2' url="skill-page.herokuapp.com"
+                                                    quote="Hey! Visit Our WebSite">
+                                    <TwitterIcon logoFillColor="white" round={true} size={35}></TwitterIcon>
+                                </TwitterShareButton> */}
+                               
+                            </div>
+                        </div>
+                    </div>
+
+              
                 </div>
             </div>
         </>

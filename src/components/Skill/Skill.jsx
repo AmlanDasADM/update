@@ -101,6 +101,20 @@ function skill() {
                         <Preview/>
                     </div>
                     <div className="right-side-container">
+                    <div className="left-side-title-responsive">
+                            <div className="title-heading">
+                                <h3>Introduction</h3>
+                            </div>
+                            <div className="title-para">
+                                <p>How would it be if you can run your backend REST API totally free of cost within a
+                                    reasonable amount of resource limit? Besides, you do not need to manage and
+                                    provision servers based on traffic like Eid sale. Nowadays, developers only focus on
+                                    feature development and managing servers is done by cloud platforms like AWS, GCP.
+                                    Like PaSS and SaSS, FaSS (Function as a service) is very renowned. In this course we
+                                    will leverage the power of FaSS to develop a serverless app from scratch on
+                                    AWS. </p>
+                            </div>
+                        </div>
                         <div class="right-side-modal-body">
                             <ReactPlayer url="https://www.youtube.com/watch?v=oluY633rkgI" controls={true} height="100%"
                                          width="100%"/>
@@ -145,7 +159,7 @@ function skill() {
                                         <img src={faqImg3} alt="" srcset=""/>
                                     </div>
                                     <div className="about-box-heading">
-                                        <h5>Q.What will you learn from this course?</h5>
+                                        <h5>Q. What will you learn from this course?</h5>
                                     </div>
                                     <div className="about-box-para">
                                         <p>🧿 Create totally serverless backend </p>
@@ -193,7 +207,7 @@ function skill() {
                                         <img src={faqImg3} alt="" srcSet=""/>
                                     </div>
                                     <div className="about-box-heading">
-                                        <h5>Q.Prerequisite of this course</h5>
+                                        <h5>Q. Prerequisite of this course</h5>
                                     </div>
                                     <div className="about-box-para">
                                         <p>🧿 At Least 1 year of web development experience on Backend</p>
